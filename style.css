@@ -1,0 +1,99 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #2e86c1;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Navbar using Flexbox */
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    background: #117a65;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+/* Main Layout using Grid */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* content and sidebar */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Content */
+.content {
+    background: #ebf5fb;
+    padding: 15px;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #fdedec;
+    padding: 15px;
+}
+
+/* Cards using Flexbox */
+.card-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.card {
+    flex: 1;
+    background: #d5dbdb;
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background: #2e86c1;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 900px) {
+    .grid-layout { 
+        grid-template-columns: 1fr; /* stack content and sidebar */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        flex-direction: column; /* cards stack */
+    }
+}
